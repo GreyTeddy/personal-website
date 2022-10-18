@@ -1,6 +1,5 @@
 import Logo from './logo'
 import NextLink from 'next/link'
-import colors from '../lib/theme'
 
 import {
     Container,
@@ -8,7 +7,6 @@ import {
     Link,
     Heading,
     Flex,
-    Stack,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 
@@ -36,22 +34,6 @@ const NavBar = (props) => {
                         <Logo />
                     </Heading>
                 </Flex>
-                <Stack direction={{ base: 'column', md: 'row' }}
-                    display={{ base: 'none', md: 'flex' }}
-                    width={{ base: 'full', md: 'auto' }}
-                    alignItems="center"
-                    flexGrow={1}
-                    mt={{ base: 4, nmd: 0 }}
-                >
-                    <SectionItem href="#Education"
-                    >
-                        Education
-                    </SectionItem>
-                    <SectionItem href="#Projects"
-                    >
-                        Projects
-                    </SectionItem>
-                </Stack>
             </Container>
         </Box>
     )
