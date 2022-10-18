@@ -12,6 +12,27 @@ const Page = () => {
                     <p>Software Engineering, Cyber Security</p>
                 </Box>
             </Box>
+            <Section delay="0.5s">
+                <Heading as="h3" size="md" variant='section-title'>
+                    Education
+                </Heading>
+                <Box>
+                    <Text>
+                        MSc Computing (Software Engineering)
+                    </Text>
+                    <Text>
+                        Imperial College London
+                    </Text>
+                </Box>
+                <Box>
+                    <Text>
+                        BSc Computer Science
+                    </Text>
+                    <Text>
+                        Goldsmiths, University of London
+                    </Text>
+                </Box>
+            </Section>
         </Container>
     )
 }

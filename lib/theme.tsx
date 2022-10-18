@@ -1,5 +1,5 @@
-import {extendTheme} from '@chakra-ui/react'
-import {mode} from '@chakra-ui/theme-tools'
+import { extendTheme, StyleFunctionProps } from '@chakra-ui/react'
+import { mode } from '@chakra-ui/theme-tools'
 
 const colors = {
     eerieBlack: '#141414',
@@ -14,7 +14,7 @@ const colors = {
 const styles = {
     global: props => ({
         body: {
-            bg: mode(colors.platinum,colors.eerieBlack)(props)
+            bg: mode(colors.platinum, colors.eerieBlack)(props)
         }
     })
 }
@@ -22,21 +22,25 @@ const styles = {
 const components = {
     Heading: {
         variants: {
-            'section-tittle': {
+            'section-title': (props: StyleFunctionProps) => ({
+                textDecoration: 'underline',
+                textUnderlineOffset: 6,
+                textDecorationThickness: 4,
+                textDecorationColor: mode(colors.steelBlue,colors.yellowCrayola)(props),
                 fontSize: 20,
                 marginTop: 3,
-                magrinBottom: 4
-            }
+                marginBottom: 4
+            })
         }
     },
     Link: {
         baseStyle: props => ({
-            color: mode(colors.jet,colors.celadon)(props),
+            color: mode(colors.jet, colors.celadon)(props),
         })
     },
     DrawerBody: {
         baseStyle: props => ({
-            background: mode(colors.jet,colors.celadon)(props),
+            background: mode(colors.jet, colors.celadon)(props),
         })
     }
 }
@@ -47,7 +51,7 @@ const config = {
 }
 
 const theme = extendTheme({
-    config,styles,components,colors
+    config, styles, components, colors
 })
 
 export default theme
