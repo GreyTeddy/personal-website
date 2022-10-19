@@ -1,10 +1,6 @@
-import { Container, Box, Heading, ListItem, List } from "@chakra-ui/react"
-import Paragraph from "../components/paragraph"
+import { Container, Box, Heading} from "@chakra-ui/react"
 import Section from '../components/section'
 import SectionTitle from "../components/section_title"
-import { BsFileEarmarkLockFill } from 'react-icons/bs'
-import { FaGasPump } from 'react-icons/fa'
-import { TbAtom } from 'react-icons/tb'
 
 const Page = () => {
     return (
