@@ -2,7 +2,7 @@ import Head from 'next/head'
 import NavBar from '../navbar'
 import {Box, Container} from '@chakra-ui/react'
 
-const Main = ({children, router}) => {
+const Main = ({children}) => {
     return (
         <Box as='main'>
             <Head>
