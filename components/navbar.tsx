@@ -1,5 +1,4 @@
 import Logo from './logo'
-import NextLink from 'next/link'
 
 import {
     Container,
@@ -8,7 +7,7 @@ import {
     Flex,
 } from '@chakra-ui/react'
 
-const NavBar = (props) => {
+const NavBar = () => {
     return (
         <Box
             position="fixed"

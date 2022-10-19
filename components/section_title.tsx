@@ -1,13 +1,13 @@
-import { Box, Stack, Text } from "@chakra-ui/react"
+import { Box, Stack, Text, Image } from "@chakra-ui/react"
 
 const SectionTitle = ({ title, institution, image = "" }) => {
     return (
         <Box>
             <Stack>
                 <Text>{title}</Text>
-                <Text fontSize={14} style={{marginTop: 0,display:'inline-flex'}} opacity={0.8}>
+                <Text fontSize={14} style={{marginTop: 0,display:'inline-flex'}} opacity={0.8} >
                     {institution}
-                    {image ? <img style={{margin:"0 4px", maxWidth: "20px", maxHeight: "20px"}} src={image}/> : ""}
+                    {image ? <Image style={{margin:"0 4px", maxWidth: "20px", maxHeight: "20px"}} alt={"image of " + institution} src={image}/> : ""}
                 </Text>
             </Stack>
         </Box>
