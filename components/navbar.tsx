@@ -4,21 +4,9 @@ import NextLink from 'next/link'
 import {
     Container,
     Box,
-    Link,
     Heading,
     Flex,
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
-
-const SectionItem = ({ href, children, ...props }) => {
-    return (
-        <NextLink href={href} passHref scroll={true}>
-            <Link style={{ padding: "0 5px" }} {...props}>
-                {children}
-            </Link>
-        </NextLink>
-    )
-}
 
 const NavBar = (props) => {
     return (

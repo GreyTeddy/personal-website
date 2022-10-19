@@ -15,7 +15,7 @@ const LogoBox = styled.span`
     padding:10px;
 }
 
-&:hover #logoAndText button, &:active #logoAndText button{
+.toAnimate {
     animation: 0.3s ease-in rotate forwards;
 }
 
@@ -37,17 +37,22 @@ const Logo = () => {
     const { toggleColorMode } = useColorMode()
 
     const startFontChange = (event: AnimationEvent<HTMLElement>) => {
+        toggleColorMode()
         event.currentTarget.parentElement.getElementsByTagName("p")[0].style.animation = "changeFont 0.5s";
     }
     const stopFontChange = (event: AnimationEvent<HTMLElement>) => {
         event.currentTarget.style.animation = "0s"
+        event.currentTarget.parentElement.getElementsByTagName("button")[0].classList.remove('toAnimate')
     }
-
+    const onClick = (event) => {
+        const element = event.currentTarget.children[0].classList
+        element.add("toAnimate")
+    }
     return (
         <Link href="">
             <a>
                 <LogoBox>
-                    <div id="logoAndText" onClick={toggleColorMode}>
+                    <div id="logoAndText" onClick={onClick}>
                         <button onAnimationEnd={startFontChange}><RiBearSmileFill /></button>
                         <Text color={useColorModeValue(colors.eerieBlack, colors.platinum)} onAnimationEnd={stopFontChange} ml={3} >
                             GreyTeddy
