@@ -35,12 +35,12 @@ const components = {
     },
     Link: {
         baseStyle: props => ({
-            color: mode(colors.jet, colors.celadon)(props),
+            color: mode(colors.jet, colors.yellowCrayola)(props),
         })
     },
     DrawerBody: {
         baseStyle: props => ({
-            background: mode(colors.jet, colors.celadon)(props),
+            background: mode(colors.jet, colors.yellowCrayola)(props),
         })
     }
 }
