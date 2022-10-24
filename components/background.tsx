@@ -23,17 +23,6 @@ const Background = () => {
       }
     `
 
-    const blurKeyframe = keyframes`
-      0% {
-        filter: drop-shadow(2px 1px 15px black);
-      }
-      50% {
-        filter: drop-shadow(-2px -1px 15px black);
-      }
-      100% {
-        filter: drop-shadow(1px 1px 15px black);
-      }
-    `
     return (
         <Box sx={{
             zIndex: -1,
