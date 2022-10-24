@@ -1,4 +1,4 @@
-import { Container, Box, Heading, List, useColorModeValue } from "@chakra-ui/react"
+import { Container, Box, Heading, List, useColorModeValue, SystemStyleObject } from "@chakra-ui/react"
 import Paragraph from "../components/paragraph"
 import Section from '../components/section'
 import Background from '../components/background'
@@ -15,6 +15,7 @@ import { BiCoin } from 'react-icons/bi'
 const Page = () => {
     return (
         <Container>
+            <Background/>
             <Box display={{ md: 'flex' }}>
                 <Box flexGrow={1}>
                     <Heading as="h1" size="2xl" variant="page-title">
