@@ -26,7 +26,7 @@ const components = {
                 textDecoration: 'underline',
                 textUnderlineOffset: 6,
                 textDecorationThickness: 4,
-                textDecorationColor: mode(colors.steelBlue,colors.yellowCrayola)(props),
+                textDecorationColor: mode(colors.jet,colors.platinum)(props),
                 fontSize: 20,
                 marginTop: 3,
                 marginBottom: 4
