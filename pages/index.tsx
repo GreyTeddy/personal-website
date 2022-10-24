@@ -12,8 +12,6 @@ import { MdOutlineSpeakerNotes } from 'react-icons/md'
 import { BiCoin } from 'react-icons/bi'
 
 const Page = () => {
-    const headingSize = 'lg';
-
     return (
         <Container>
             <Background />
@@ -26,7 +24,7 @@ const Page = () => {
                 </Box>
             </Box>
             <Section delay="0.2s">
-                <Heading as="h3" size={headingSize} variant='section-title'>
+                <Heading as="h3" variant='section-title'>
                     Education
                 </Heading>
                 <Box>
@@ -53,12 +51,12 @@ const Page = () => {
                 </Box>
             </Section>
             <Section delay="0.5s">
-                <Heading as="h3" size={headingSize} variant='section-title'>
+                <Heading as="h3" variant='section-title'>
                     Projects
                 </Heading>
                 <Box>
                     <Paragraph>
-                        These are some cute projects I've made during my studying. The piano has a close place to my heart {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}
+                        These are some cute projects I&apos;ve made during my studying. The piano has a close place to my heart {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}
                     </Paragraph>
                     <List fontWeight={40} >
                         <ProjectListItem href="https://greyteddy.github.io/piano/" emoji={<CgPiano />}>
@@ -77,7 +75,7 @@ const Page = () => {
                 </Box>
             </Section>
             <Section delay="0.7s">
-                <Heading as="h3" size={headingSize} variant='section-title'>
+                <Heading as="h3" variant='section-title'>
                     Music
                 </Heading>
                 <Box>

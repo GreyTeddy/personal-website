@@ -5,7 +5,7 @@ const colors = {
     eerieBlack: '#141414',
     jet: '#2b2b2b',
     yellowCrayola: '#FAA916',
-    steelBlue: '#4D7EA8',
+    steelBlue: '#2C5D87',
     redCrayola: '#FE5F55',
     celadon: '#AEE7BD',
     platinum: '#E3E3E3',
@@ -27,7 +27,7 @@ const components = {
                 textUnderlineOffset: 6,
                 textDecorationThickness: 4,
                 textDecorationColor: mode(colors.jet,colors.platinum)(props),
-                fontSize: 20,
+                fontSize: 30,
                 marginTop: 3,
                 marginBottom: 4
             })
