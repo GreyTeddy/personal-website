@@ -27,7 +27,7 @@ const components = {
                 textUnderlineOffset: 6,
                 textDecorationThickness: 4,
                 textDecorationColor: mode(colors.jet,colors.platinum)(props),
-                fontSize: 30,
+                fontSize: 25,
                 marginTop: 3,
                 marginBottom: 4
             })

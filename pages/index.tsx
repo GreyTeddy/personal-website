@@ -10,13 +10,17 @@ import { CgPiano } from 'react-icons/cg'
 import ProjectListItem from '../components/project_link_item'
 import { MdOutlineSpeakerNotes } from 'react-icons/md'
 import { BiCoin } from 'react-icons/bi'
+import { useEffect } from "react"
 
 const Page = () => {
+    useEffect(()=>{
+        console.log('What are you looking for, here? Skidaddle!')
+    })
     return (
-        <Container>
+        <Container maxWidth='container.lg'>
             <Background />
             <Box>
-                <Box flexGrow={1}>
+                <Box>
                     <Heading as="h1" size="3xl" variant="page-title">
                         Dionysios Ntouka
                     </Heading>
@@ -30,7 +34,7 @@ const Page = () => {
                 <Box>
                     <SectionTitle title="M.Sc. Computing (Software Engineering)" institution="Imperial College London" image="../images/imperial.png" />
                     <Paragraph>
-                        The MSc was challenging... but also quite fun! Chose security modules plus machine learning, robitics and distributed ledgers
+                        The MSc was challenging... but also quite fun! Chose security modules plus machine learning, robitics and distributed ledgers.
                     </Paragraph>
                     <List fontWeight={40} >
                         <ProjectListItem href="https://github.com/GreyTeddy/ransomware_mitigation" emoji={<BsFileEarmarkLockFill />}>
@@ -56,7 +60,7 @@ const Page = () => {
                 </Heading>
                 <Box>
                     <Paragraph>
-                        These are some cute projects I&apos;ve made during my studying. The piano has a close place to my heart {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}
+                        These are some cute projects I&apos;ve made during my studying. The piano has a close place to my heart {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}.
                     </Paragraph>
                     <List fontWeight={40} >
                         <ProjectListItem href="https://greyteddy.github.io/piano/" emoji={<CgPiano />}>

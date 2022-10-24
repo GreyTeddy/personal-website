@@ -39,12 +39,12 @@ const Background = () => {
             zIndex: -1,
             position: 'fixed',
             // bottom: 0,
-            // left: 0,
+            left: "50%",
             height: "450px",
             width: "450px",
             background: useColorModeValue(lightImage, darkImage),
             animation: `${rotationKeyframe} 5s linear infinite`,
-            backgroundRepeat: 'repeat',
+            // backgroundRepeat: 'repeat',
             // filter: 'invert(1)'
         }}></Box>
     )
