@@ -43,7 +43,7 @@ const Background = () => {
             height: "450px",
             width: "450px",
             background: useColorModeValue(lightImage, darkImage),
-            animation: `${rotationKeyframe} 10s ease-in infinite`,
+            animation: `${rotationKeyframe} 5s linear infinite`,
             backgroundRepeat: 'repeat',
             // filter: 'invert(1)'
         }}></Box>
