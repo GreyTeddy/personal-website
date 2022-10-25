@@ -60,7 +60,7 @@ const Page = () => {
                 </Heading>
                 <Box>
                     <Paragraph>
-                        These are some cute projects I&apos;ve made during my studying. I suggest you try not_flappy_bird {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}.
+                        These are some cute projects I&apos;ve made during my studying {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}.
                     </Paragraph>
                     <List fontWeight={40} >
                         <ProjectListItem href="https://greyteddy.github.io/not_flappy_bird/" emoji={<FaKiwiBird />}>
