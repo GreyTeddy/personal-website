@@ -30,7 +30,11 @@ const components = {
                 fontSize: 25,
                 marginTop: 3,
                 marginBottom: 4
-            })
+            }),
+            'page-title': {
+                margin:'7px 0',
+                left: '-1'
+            }
         }
     },
     Link: {
