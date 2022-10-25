@@ -60,17 +60,17 @@ const Page = () => {
                 </Heading>
                 <Box>
                     <Paragraph>
-                        These are some cute projects I&apos;ve made during my studying. The piano has a close place to my heart {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}.
+                        These are some cute projects I&apos;ve made during my studying. I suggest you try not_flappy_bird {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}.
                     </Paragraph>
                     <List fontWeight={40} >
+                        <ProjectListItem href="https://greyteddy.github.io/not_flappy_bird/" emoji={<FaKiwiBird />}>
+                            not_flappy_bird
+                        </ProjectListItem>
                         <ProjectListItem href="https://greyteddy.github.io/piano/" emoji={<CgPiano />}>
                             piano
                         </ProjectListItem>
                         <ProjectListItem href="https://notepad-837ad.web.app/" emoji={<MdOutlineSpeakerNotes />}>
                             teddy_notes
-                        </ProjectListItem>
-                        <ProjectListItem href="https://greyteddy.github.io/not_flappy_bird/" emoji={<FaKiwiBird />}>
-                            not_flappy_bird
                         </ProjectListItem>
                         <ProjectListItem href="https://github.com/GreyTeddy/currencies" emoji={<BiCoin />}>
                             currencies
