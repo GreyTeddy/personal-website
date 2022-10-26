@@ -11,9 +11,11 @@ import ProjectListItem from '../components/project_link_item'
 import { MdOutlineSpeakerNotes } from 'react-icons/md'
 import { BiCoin } from 'react-icons/bi'
 import { useEffect } from "react"
+import Socials from "../components/socials"
+import { Divider } from '@chakra-ui/react'
 
 const Page = () => {
-    useEffect(()=>{
+    useEffect(() => {
         console.log('What are you looking for, here? Skidaddle!')
     })
     return (
@@ -95,6 +97,12 @@ const Page = () => {
                         </ProjectListItem>
                     </List>
                 </Box>
+            </Section>
+            <Section delay="0.9s">
+                <Divider />
+            </Section>
+            <Section delay="1s">
+                <Socials />
             </Section>
         </Container>
     )
