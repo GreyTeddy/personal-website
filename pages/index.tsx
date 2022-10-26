@@ -48,7 +48,7 @@ const Page = () => {
                 <Box>
                     <SectionTitle title="B.Sc. Computer Science" institution="Goldsmiths, University of London" image="../images/goldsmiths.png" />
                     <List fontWeight={40} >
-                        <ProjectListItem href="" emoji={<TbAtom />}>
+                        <ProjectListItem href="https://pdfhost.io/v/x0DEZgIjQ_Quantum_Computing_Cryptography_and_the_Hidden_Subgroup_Problem" emoji={<TbAtom />}>
                             Quantum Computing, Cryptography and the Hidden Subgroup Problem
                         </ProjectListItem>
                     </List>
