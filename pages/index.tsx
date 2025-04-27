@@ -23,7 +23,7 @@ const Page = () => {
                     <Heading as="h1" size="3xl" variant="page-title">
                         Dionysios Ntouka
                     </Heading>
-                    <p>Site Reliability Engineer at <a href="https://c3.ai/">C3 AI</a> and stuffs</p>
+                    <p>Site Reliability Engineer at <a href="https://c3.ai/">C3 AI</a></p>
                 </Box>
             </Box>
             <Section delay="0.2s">
