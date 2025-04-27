@@ -4,7 +4,7 @@ import Section from '../components/section'
 import Background from '../components/background'
 import SectionTitle from "../components/section_title"
 import { BsFileEarmarkLockFill, BsMusicNote, BsSuitHeartFill } from 'react-icons/bs'
-import { FaGasPump, FaKiwiBird } from 'react-icons/fa'
+import { FaCircle, FaGasPump, FaKiwiBird, FaSearch } from 'react-icons/fa'
 import { TbAtom } from 'react-icons/tb'
 import { CgPiano } from 'react-icons/cg'
 import ProjectListItem from '../components/project_link_item'
@@ -26,45 +26,33 @@ const Page = () => {
                     <Heading as="h1" size="3xl" variant="page-title">
                         Dionysios Ntouka
                     </Heading>
-                    <p>Software Engineering, Cyber Security</p>
+                    <p>Site Reliability Engineer at <a href="https://c3.ai/">C3 AI</a> and stuffs</p>
                 </Box>
             </Box>
             <Section delay="0.2s">
                 <Heading as="h3" variant='section-title'>
-                    Education
+                    Hi!
                 </Heading>
                 <Box>
-                    <SectionTitle title="M.Sc. Computing (Software Engineering)" institution="Imperial College London" image="../images/imperial.png" />
-                    <Paragraph>
-                        The MSc was challenging... but also quite fun! Chose security modules plus machine learning, robitics and distributed ledgers.
-                    </Paragraph>
-                    <List fontWeight={40} >
-                        <ProjectListItem href="https://github.com/GreyTeddy/ransomware_mitigation" emoji={<BsFileEarmarkLockFill />}>
-                            Mitigating Encryption from Ransomware
-                        </ProjectListItem>
-                        <ProjectListItem href="" emoji={<FaGasPump />}>
-                            FuelOpt
-                        </ProjectListItem>
-                    </List>
-                </Box>
-                <Box>
-                    <SectionTitle title="B.Sc. Computer Science" institution="Goldsmiths, University of London" image="../images/goldsmiths.png" />
-                    <List fontWeight={40} >
-                        <ProjectListItem href="https://pdfhost.io/v/x0DEZgIjQ_Quantum_Computing_Cryptography_and_the_Hidden_Subgroup_Problem" emoji={<TbAtom />}>
-                            Quantum Computing, Cryptography and the Hidden Subgroup Problem
-                        </ProjectListItem>
-                    </List>
+                    Hopefully, at some point I'll post a blog post. Sadly, not yet.
                 </Box>
             </Section>
-            <Section delay="0.5s">
+            <Section delay="0.2s">
                 <Heading as="h3" variant='section-title'>
                     Projects
                 </Heading>
                 <Box>
                     <Paragraph>
-                        These are some cute projects I&apos;ve made during my studying {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}.
+                        These are some projects I&apos;ve made during my free time {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}.
+                        I use search_things everyday at work! You can try it out as well!
                     </Paragraph>
                     <List fontWeight={40} >
+                        <ProjectListItem href="https://chromewebstore.google.com/detail/search-things/aokpbbgodkjgafgdegbhiaebhamejakn" emoji={<FaSearch />}>
+                            search_things
+                        </ProjectListItem>
+                        <ProjectListItem href="https://github.com/GreyTeddy/eater_dropper" emoji={<FaCircle />}>
+                            eater_dropper
+                        </ProjectListItem>
                         <ProjectListItem href="https://greyteddy.github.io/not_flappy_bird/" emoji={<FaKiwiBird />}>
                             not_flappy_bird
                         </ProjectListItem>
@@ -74,19 +62,16 @@ const Page = () => {
                         <ProjectListItem href="https://notepad-837ad.web.app/" emoji={<MdOutlineSpeakerNotes />}>
                             teddy_notes
                         </ProjectListItem>
-                        <ProjectListItem href="https://github.com/GreyTeddy/currencies" emoji={<BiCoin />}>
-                            currencies
-                        </ProjectListItem>
                     </List>
                 </Box>
             </Section>
-            <Section delay="0.7s">
+            <Section delay="0.5s">
                 <Heading as="h3" variant='section-title'>
                     Music
                 </Heading>
                 <Box>
                     <Paragraph>
-                        I have been making music for a while and these are a few songs I have released.
+                        I have been making music for a while but I've been pressured by friends to release these ones.
                     </Paragraph>
                     <List fontWeight={40}>
                         <ProjectListItem href='https://www.youtube.com/watch?v=tAmfmrORvHk' emoji={<BsSuitHeartFill />}>
@@ -98,10 +83,10 @@ const Page = () => {
                     </List>
                 </Box>
             </Section>
-            <Section delay="0.9s">
+            <Section delay="0.7s">
                 <Divider />
             </Section>
-            <Section delay="1s">
+            <Section delay="0.9s">
                 <Socials />
             </Section>
         </Container>
