@@ -68,7 +68,7 @@ const Page = () => {
                 </Heading>
                 <Box>
                     <Paragraph>
-                        I have been making music for a while but I've been pressured by friends to release these ones.
+                        I have been making music for a while but I&apos;ve been pressured by friends to release these ones.
                     </Paragraph>
                     <List fontWeight={40}>
                         <ProjectListItem href='https://www.youtube.com/watch?v=tAmfmrORvHk' emoji={<BsSuitHeartFill />}>
