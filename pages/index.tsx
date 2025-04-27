@@ -2,14 +2,11 @@ import { Container, Box, Heading, List, useColorModeValue } from "@chakra-ui/rea
 import Paragraph from "../components/paragraph"
 import Section from '../components/section'
 import Background from '../components/background'
-import SectionTitle from "../components/section_title"
-import { BsFileEarmarkLockFill, BsMusicNote, BsSuitHeartFill } from 'react-icons/bs'
-import { FaCircle, FaGasPump, FaKiwiBird, FaSearch } from 'react-icons/fa'
-import { TbAtom } from 'react-icons/tb'
+import { BsMusicNote, BsSuitHeartFill } from 'react-icons/bs'
+import { FaCircle, FaKiwiBird, FaSearch } from 'react-icons/fa'
 import { CgPiano } from 'react-icons/cg'
 import ProjectListItem from '../components/project_link_item'
 import { MdOutlineSpeakerNotes } from 'react-icons/md'
-import { BiCoin } from 'react-icons/bi'
 import { useEffect } from "react"
 import Socials from "../components/socials"
 import { Divider } from '@chakra-ui/react'
