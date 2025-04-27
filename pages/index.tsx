@@ -31,7 +31,7 @@ const Page = () => {
                     Hi!
                 </Heading>
                 <Box>
-                    Hopefully, at some point I'll post a blog post. Sadly, not yet.
+                    Hopefully, at some point I&apos;ll post a blog post. Sadly, not yet.
                 </Box>
             </Section>
             <Section delay="0.2s">
