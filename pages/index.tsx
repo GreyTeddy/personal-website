@@ -44,8 +44,11 @@ const Page = () => {
                         I use search_things everyday at work! You can try it out as well!
                     </Paragraph>
                     <List fontWeight={40} >
-                        <ProjectListItem href="https://chromewebstore.google.com/detail/search-things/aokpbbgodkjgafgdegbhiaebhamejakn" emoji={<FaSearch />}>
+                        <ProjectListItem href="https://github.com/GreyTeddy/search_things" emoji={<FaSearch />}>
                             search_things
+                        </ProjectListItem>
+                        <ProjectListItem href="https://github.com/GreyTeddy/sticky_noter" emoji={<MdOutlineSpeakerNotes />}>
+                            sticky_noter
                         </ProjectListItem>
                         <ProjectListItem href="https://github.com/GreyTeddy/eater_dropper" emoji={<FaCircle />}>
                             eater_dropper
@@ -55,9 +58,6 @@ const Page = () => {
                         </ProjectListItem>
                         <ProjectListItem href="https://greyteddy.github.io/piano/" emoji={<CgPiano />}>
                             piano
-                        </ProjectListItem>
-                        <ProjectListItem href="https://notepad-837ad.web.app/" emoji={<MdOutlineSpeakerNotes />}>
-                            teddy_notes
                         </ProjectListItem>
                     </List>
                 </Box>
