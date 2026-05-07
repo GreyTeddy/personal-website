@@ -41,7 +41,7 @@ const Page = () => {
                 <Box>
                     <Paragraph>
                         These are some projects I&apos;ve made during my free time {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}.
-                        I use search_things everyday at work! You can try it out as well!
+                        I use search_things everyday at work! You can try it them as well!
                     </Paragraph>
                     <List fontWeight={40} >
                         <ProjectListItem href="https://github.com/GreyTeddy/search_things" emoji={<FaSearch />}>
