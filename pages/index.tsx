@@ -26,7 +26,7 @@ const Page = () => {
                     <p>Site Reliability Engineer at <a href="https://c3.ai/">C3 AI</a></p>
                 </Box>
             </Box>
-            <Section delay="0.2s">
+            <Section delay="0.0s">
                 <Heading as="h3" variant='section-title'>
                     Hi!
                 </Heading>
