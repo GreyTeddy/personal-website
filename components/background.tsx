@@ -28,7 +28,7 @@ const Background = () => {
       background: useColorModeValue(lightImage, darkImage),
       animation: `${rotationKeyframe} 10s ease-in-out infinite`,
       // backgroundRepeat: 'repeat',
-      // filter: 'invert(1)'
+      filter: useColorModeValue('invert(82%)','invert(40%)')
     }}></Box>
   )
 }
