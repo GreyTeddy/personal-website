@@ -41,11 +41,11 @@ const Page = () => {
                 <Box>
                     <Paragraph>
                         These are some projects I&apos;ve made during my free time {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}.
-                        I use search_things everyday at work! You can try it them as well!
+                        I use searching_things and sticky_noter everyday at work! You can try it them as well!
                     </Paragraph>
                     <List fontWeight={40} >
-                        <ProjectListItem href="https://github.com/GreyTeddy/search_things" emoji={<FaSearch />}>
-                            search_things
+                        <ProjectListItem href="https://github.com/GreyTeddy/searching_things" emoji={<FaSearch />}>
+                            searching_things
                         </ProjectListItem>
                         <ProjectListItem href="https://github.com/GreyTeddy/sticky_noter" emoji={<MdOutlineSpeakerNotes />}>
                             sticky_noter
