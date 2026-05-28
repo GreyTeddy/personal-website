@@ -50,16 +50,14 @@ const Logo = () => {
     }
     return (
         <Link href="">
-            <a>
-                <LogoBox>
-                    <div id="logoAndText" onClick={onClick}>
-                        <button onAnimationEnd={startFontChange}><RiBearSmileFill /></button>
-                        <Text color={useColorModeValue(colors.eerieBlack, colors.platinum)} onAnimationEnd={stopFontChange} ml={3} >
-                            GreyTeddy
-                        </Text>
-                    </div>
-                </LogoBox>
-            </a>
+            <LogoBox>
+                <div id="logoAndText" onClick={onClick}>
+                    <button onAnimationEnd={startFontChange}><RiBearSmileFill /></button>
+                    <Text color={useColorModeValue(colors.eerieBlack, colors.platinum)} onAnimationEnd={stopFontChange} ml={3} >
+                        GreyTeddy
+                    </Text>
+                </div>
+            </LogoBox>
         </Link>
     )
 }

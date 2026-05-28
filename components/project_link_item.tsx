@@ -1,4 +1,4 @@
-import { Box, keyframes, Link, ListItem, SystemStyleObject, useColorModeValue } from '@chakra-ui/react'
+import { Box, keyframes, ListItem, SystemStyleObject, Text, useColorModeValue } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { MouseEvent, TransitionEvent } from 'react';
 import theme from '../lib/theme';
@@ -56,7 +56,7 @@ const ProjectListItem = ({ href, children, emoji }) => {
             <Box style={{ display: 'inline-flex', alignItems: 'center' }}>
                 <NextLink href={href} passHref>
                     <Box style={{ display: 'inline-flex', alignItems: 'center', fontSize: '15px', fontWeight: 'bold' }}>
-                        <Link sx={titleAfterStyle} onTransitionEnd={showEmoji} onMouseLeave={showEmoji} className="projectLink">{children}</Link>
+                        <Text sx={titleAfterStyle} onTransitionEnd={showEmoji} onMouseLeave={showEmoji} className="projectLink">{children}</Text>
                         <Box sx={emojiStyle} animation={rotationKeyframe}>{emoji}</Box>
                     </Box>
                 </NextLink>

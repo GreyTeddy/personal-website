@@ -17,13 +17,14 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "react-jsx"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "components/layouts/main.js"  ],
+    "**/*.tsx",
+    "components/layouts/main.js"
+  ],
   "exclude": [
     "node_modules"
   ]
