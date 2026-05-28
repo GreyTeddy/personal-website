@@ -2,8 +2,8 @@ import { Box, keyframes, useColorModeValue } from "@chakra-ui/react"
 
 const Background = () => {
 
-  const darkImage = 'url("../images/teddy_icon_dark.webp")';
-  const lightImage = 'url("../images/teddy_icon_light.webp")';
+  const darkImage = 'url("../images/teddy_icon_vertices.svg")';
+  const lightImage = 'url("../images/teddy_icon_vertices.svg")';
 
   const rotationKeyframe = keyframes`
       0% {
