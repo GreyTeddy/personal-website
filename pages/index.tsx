@@ -26,7 +26,7 @@ const Page = () => {
                     <Heading as="h1" size="3xl" variant="page-title">
                         Dionysios Ntouka
                     </Heading>
-                    <p>Site Reliability Engineer at <a href="https://c3.ai/">C3 AI</a></p>
+                    <p>CrashLoopBackoffs, :()&#123; :|:&amp; &#125;;:, and DNS at <a href="https://c3.ai/">C3 AI</a></p>
                 </Box>
             </Box>
             <Section delay="0.0s">
