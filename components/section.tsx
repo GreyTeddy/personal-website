@@ -1,24 +1,22 @@
-import { motion } from 'framer-motion'
-import { chakra, shouldForwardProp } from '@chakra-ui/react'
+import { keyframes } from '@emotion/react'
+import { Box } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 
-const StyledDiv = chakra(motion.div, {
-    shouldForwardProp: prop => {
-        return shouldForwardProp(prop) || prop === 'transition';
-    }
-})
+const fadeInSlide = keyframes`
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+`
 
 const Section = ({ children, delay = "0.5s" }: { children: ReactNode; delay?: string }) => {
     return (
-        <StyledDiv
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transitionDuration={"0.4s"}
-            transitionDelay= {delay}
+        <Box
+            animation={`${fadeInSlide} 0.4s ease-out forwards`}
+            animationDelay={delay}
+            opacity={0}
             mb={6}
         >
             {children}
-        </StyledDiv>
+        </Box>
     )
 }
 
