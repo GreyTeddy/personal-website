@@ -14,22 +14,23 @@ const Socials = () => {
         justifyContent: 'center',
     }
 
+    const buttonBg = useColorModeValue('#DCDCDC', theme.colors.jet)
     const buttonStyle: SystemStyleObject = {
-        backgroundColor: useColorModeValue('#DCDCDC', theme.colors.jet),
+        backgroundColor: buttonBg,
     }
 
     return (
         <Box sx={style}>
-            <Button sx={buttonStyle}>
+            <Button sx={buttonStyle} aria-label="GitHub">
                 <NextLink href={"https://github.com/GreyTeddy"}><BsGithub /></NextLink>
             </Button>
-            <Button sx={buttonStyle}>
+            <Button sx={buttonStyle} aria-label="LinkedIn">
                 <NextLink href={"https://www.linkedin.com/in/dionysios-ntouka-a6b697165/"}><FaLinkedinIn /></NextLink>
             </Button>
-            <Button sx={buttonStyle}>
+            <Button sx={buttonStyle} aria-label="YouTube">
                 <NextLink href={"https://www.youtube.com/channel/UCnJOMW0IjWTeiIuGaAoPAGw"}><AiFillYoutube /></NextLink>
             </Button>
-            <Button sx={buttonStyle}>
+            <Button sx={buttonStyle} aria-label="Email">
                 <NextLink href={"mailto:dukadennis7@gmail.com"}><GrMail /></NextLink>
             </Button>
         </Box>
