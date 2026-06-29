@@ -10,8 +10,7 @@ const fadeInSlide = keyframes`
 const Section = ({ children, delay = "0.5s" }: { children: ReactNode; delay?: string }) => {
     return (
         <Box
-            animation={`${fadeInSlide} 0.4s ease-out forwards`}
-            animationDelay={delay}
+            animation={`${fadeInSlide} 0.4s ease-out ${delay} forwards`}
             opacity={0}
             mb={6}
         >
