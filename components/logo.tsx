@@ -3,7 +3,7 @@ import { RiBearSmileFill } from 'react-icons/ri'
 import { Text, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import colors from '../lib/theme'
 import styled from '@emotion/styled'
-import { AnimationEvent, MouseEvent } from 'react';
+import { useState } from 'react';
 
 const LogoBox = styled.span`
 #logoAndText{
@@ -35,31 +35,37 @@ const LogoBox = styled.span`
 
 const Logo = () => {
     const { toggleColorMode } = useColorMode()
+    const [isRotating, setIsRotating] = useState(false)
+    const [isFontChanging, setIsFontChanging] = useState(false)
+    const textColor = useColorModeValue(colors.eerieBlack, colors.platinum)
 
-    const startFontChange = (event: AnimationEvent<HTMLElement>) => {
+    const handleClick = () => {
+        setIsRotating(true)
+    }
+
+    const handleRotateEnd = () => {
+        setIsRotating(false)
         toggleColorMode()
-        const parent = event.currentTarget.parentElement
-        if (parent) {
-            parent.getElementsByTagName("p")[0].style.animation = "changeFont 0.5s"
-        }
+        setIsFontChanging(true)
     }
-    const stopFontChange = (event: AnimationEvent<HTMLElement>) => {
-        event.currentTarget.style.animation = "0s"
-        const parent = event.currentTarget.parentElement
-        if (parent) {
-            parent.getElementsByTagName("button")[0].classList.remove('toAnimate')
-        }
+
+    const handleFontChangeEnd = () => {
+        setIsFontChanging(false)
     }
-    const onClick = (event: MouseEvent<HTMLDivElement>) => {
-        const element = event.currentTarget.children[0].classList
-        element.add("toAnimate")
-    }
+
     return (
         <Link href="">
             <LogoBox>
-                <div id="logoAndText" onClick={onClick}>
-                    <button onAnimationEnd={startFontChange}><RiBearSmileFill /></button>
-                    <Text color={useColorModeValue(colors.eerieBlack, colors.platinum)} onAnimationEnd={stopFontChange} ml={3} >
+                <div id="logoAndText" onClick={handleClick}>
+                    <button className={isRotating ? 'toAnimate' : ''} onAnimationEnd={handleRotateEnd}>
+                        <RiBearSmileFill />
+                    </button>
+                    <Text
+                        color={textColor}
+                        onAnimationEnd={handleFontChangeEnd}
+                        animation={isFontChanging ? "changeFont 0.5s" : "0s"}
+                        ml={3}
+                    >
                         GreyTeddy
                     </Text>
                 </div>
