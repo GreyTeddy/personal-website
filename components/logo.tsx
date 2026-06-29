@@ -3,7 +3,7 @@ import { RiBearSmileFill } from 'react-icons/ri'
 import { Text, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import colors from '../lib/theme'
 import styled from '@emotion/styled'
-import { AnimationEvent } from 'react';
+import { AnimationEvent, MouseEvent } from 'react';
 
 const LogoBox = styled.span`
 #logoAndText{
@@ -38,13 +38,19 @@ const Logo = () => {
 
     const startFontChange = (event: AnimationEvent<HTMLElement>) => {
         toggleColorMode()
-        event.currentTarget.parentElement.getElementsByTagName("p")[0].style.animation = "changeFont 0.5s";
+        const parent = event.currentTarget.parentElement
+        if (parent) {
+            parent.getElementsByTagName("p")[0].style.animation = "changeFont 0.5s"
+        }
     }
     const stopFontChange = (event: AnimationEvent<HTMLElement>) => {
         event.currentTarget.style.animation = "0s"
-        event.currentTarget.parentElement.getElementsByTagName("button")[0].classList.remove('toAnimate')
+        const parent = event.currentTarget.parentElement
+        if (parent) {
+            parent.getElementsByTagName("button")[0].classList.remove('toAnimate')
+        }
     }
-    const onClick = (event) => {
+    const onClick = (event: MouseEvent<HTMLDivElement>) => {
         const element = event.currentTarget.children[0].classList
         element.add("toAnimate")
     }

@@ -1,6 +1,6 @@
 import { Box, Stack, Text, Image } from "@chakra-ui/react"
 
-const SectionTitle = ({ title, institution, image = "" }) => {
+const SectionTitle = ({ title, institution, image = "" }: { title: string; institution: string; image?: string }) => {
     return (
         <Box>
             <Stack>

@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import NavBar from '../navbar'
 import {Box, Container} from '@chakra-ui/react'
+import { ReactNode } from 'react'
 
-const Main = ({children}) => {
+const Main = ({children}: {children: ReactNode}) => {
     return (
         <Box as='main'>
             <Head>

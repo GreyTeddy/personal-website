@@ -1,9 +1,9 @@
 import { Box, keyframes, ListItem, SystemStyleObject, Text, useColorModeValue } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { MouseEvent, TransitionEvent } from 'react';
+import { MouseEvent, ReactNode, TransitionEvent } from 'react';
 import theme from '../lib/theme';
 
-const ProjectListItem = ({ href, children, emoji }) => {
+const ProjectListItem = ({ href, children, emoji }: { href: string; children: ReactNode; emoji: ReactNode }) => {
 
     const listItemStyle = {
         display: 'flex',
@@ -42,12 +42,9 @@ const ProjectListItem = ({ href, children, emoji }) => {
 
     const showEmoji = (event: TransitionEvent<HTMLElement> | MouseEvent<HTMLElement>) => {
         const element = event.currentTarget;
-        const emoji = element.parentElement.lastElementChild as HTMLElement;
-        if (element.matches(':hover')) {
-            emoji.style.display = "inline-block"
-        }
-        else {
-            emoji.style.display = "none"
+        const emoji = element.parentElement?.lastElementChild as HTMLElement | null;
+        if (emoji) {
+            emoji.style.display = element.matches(':hover') ? "inline-block" : "none"
         }
     }
 

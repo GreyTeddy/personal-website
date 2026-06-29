@@ -12,7 +12,7 @@ const colors = {
 }
 
 const styles = {
-    global: props => ({
+    global: (props: StyleFunctionProps) => ({
         body: {
             bg: mode(colors.platinum, colors.eerieBlack)(props)
         }
@@ -38,12 +38,12 @@ const components = {
         }
     },
     Link: {
-        baseStyle: props => ({
+        baseStyle: (props: StyleFunctionProps) => ({
             color: mode(colors.steelBlue, colors.yellowCrayola)(props),
         })
     },
     DrawerBody: {
-        baseStyle: props => ({
+        baseStyle: (props: StyleFunctionProps) => ({
             background: mode(colors.steelBlue, colors.yellowCrayola)(props),
         })
     }
