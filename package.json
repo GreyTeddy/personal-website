@@ -15,22 +15,22 @@
   "author": "Dennis Duka",
   "license": "MIT",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.13",
-    "@chakra-ui/react": "^2.4.3",
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
+    "@chakra-ui/icons": "^2.2.4",
+    "@chakra-ui/react": "^2.10.10",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "framer-motion": "^11.18.2",
     "next": "16.1.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.6.0",
-    "typescript": "^4.9.4"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^4.12.0",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@types/node": "18.11.0",
-    "@types/react": "18.0.21",
-    "eslint": "^8.25.0",
-    "eslint-config-next": "^12.3.1",
-    "prettier": "^2.7.1"
+    "@types/node": "^18.19.0",
+    "@types/react": "^18.3.23",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.29",
+    "prettier": "^2.8.8"
   }
 }

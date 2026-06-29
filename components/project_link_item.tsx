@@ -1,4 +1,5 @@
-import { Box, keyframes, ListItem, SystemStyleObject, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, ListItem, SystemStyleObject, Text, useColorModeValue } from '@chakra-ui/react'
+import { keyframes } from '@emotion/react'
 import NextLink from 'next/link'
 import { MouseEvent, ReactNode, TransitionEvent } from 'react';
 import theme from '../lib/theme';
