@@ -2,9 +2,12 @@ import { Container, Box, Heading, List, useColorModeValue } from "@chakra-ui/rea
 import Paragraph from "../components/paragraph"
 import Section from '../components/section'
 import dynamic from 'next/dynamic'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
 const Background = dynamic(() => import('../components/background'), { ssr: false })
-import { BsMusicNote, BsSuitHeartFill } from 'react-icons/bs'
+import { BsFileText, BsMusicNote, BsSuitHeartFill } from 'react-icons/bs'
 import { FaCircle, FaKiwiBird, FaSearch } from 'react-icons/fa'
 import { CgPiano } from 'react-icons/cg'
 import ProjectListItem from '../components/project_link_item'
@@ -13,7 +16,13 @@ import { useEffect } from "react"
 import Socials from "../components/socials"
 import { Divider } from '@chakra-ui/react'
 
-const Page = () => {
+type PostMeta = {
+  slug: string
+  title: string
+  date: string
+}
+
+const Page = ({ posts }: { posts: PostMeta[] }) => {
     const heartEmoji = useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)
     useEffect(() => {
         console.log('What are you looking for, here? Skidaddle!')
@@ -34,7 +43,29 @@ const Page = () => {
                     Hi!
                 </Heading>
                 <Box>
-                    Hopefully, at some point I&apos;ll post a blog post. Sadly, not yet.
+                    {posts.length > 0 ? (
+                        <Box
+                            maxH="200px"
+                            overflowY="auto"
+                            css={{
+                                '&::-webkit-scrollbar': { width: '4px' },
+                                '&::-webkit-scrollbar-track': { background: 'transparent' },
+                                '&::-webkit-scrollbar-thumb': { background: '#888', borderRadius: '4px' },
+                            }}
+                        >
+                            <List fontWeight={40}>
+                                {posts.map(post => (
+                                    <ProjectListItem key={post.slug} href={`/blog/${post.slug}`} emoji={<BsFileText />}>
+                                        {post.title}
+                                    </ProjectListItem>
+                                ))}
+                            </List>
+                        </Box>
+                    ) : (
+                        <Paragraph>
+                            Hopefully, at some point I&apos;ll post a blog post. Sadly, not yet.
+                        </Paragraph>
+                    )}
                 </Box>
             </Section>
             <Section delay="0.2s">
@@ -91,6 +122,33 @@ const Page = () => {
             </Section>
         </Container>
     )
+}
+
+export async function getStaticProps() {
+  const postsDir = path.join(process.cwd(), 'posts')
+  let posts: PostMeta[] = []
+
+  if (fs.existsSync(postsDir)) {
+    const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'))
+    const raw = files
+      .map(filename => {
+        const slug = filename.replace('.md', '')
+        const fileContent = fs.readFileSync(path.join(postsDir, filename), 'utf-8')
+        const { data } = matter(fileContent)
+        return { slug, title: data.title, rawDate: data.date }
+      })
+      .sort((a, b) => new Date(b.rawDate).getTime() - new Date(a.rawDate).getTime())
+
+    posts = raw.map(p => ({
+      slug: p.slug,
+      title: p.title,
+      date: new Date(p.rawDate).toLocaleDateString('en-US', {
+        year: 'numeric', month: 'long', day: 'numeric',
+      }),
+    }))
+  }
+
+  return { props: { posts } }
 }
 
 export default Page
