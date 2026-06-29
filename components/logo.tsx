@@ -3,7 +3,7 @@ import { RiBearSmileFill } from 'react-icons/ri'
 import { Text, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import colors from '../lib/theme'
 import styled from '@emotion/styled'
-import { useState } from 'react';
+import { useState, KeyboardEvent } from 'react';
 
 const LogoBox = styled.span`
 #logoAndText{
@@ -43,6 +43,13 @@ const Logo = () => {
         setIsRotating(true)
     }
 
+    const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault()
+            handleClick()
+        }
+    }
+
     const handleRotateEnd = () => {
         setIsRotating(false)
         toggleColorMode()
@@ -56,7 +63,7 @@ const Logo = () => {
     return (
         <Link href="">
             <LogoBox>
-                <div id="logoAndText" onClick={handleClick}>
+                <div id="logoAndText" onClick={handleClick} onKeyDown={handleKeyDown} role="button" tabIndex={0}>
                     <button className={isRotating ? 'toAnimate' : ''} onAnimationEnd={handleRotateEnd}>
                         <RiBearSmileFill />
                     </button>
