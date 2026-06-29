@@ -3,6 +3,14 @@ import NextLink from 'next/link'
 import { MouseEvent, ReactNode, TransitionEvent } from 'react';
 import theme from '../lib/theme';
 
+const rotationKeyframe = keyframes`
+    0% {transform: rotate(0deg);}
+    15% {transform: rotate(-20deg);}
+    50% {transform: rotate(10deg);}
+    85% {transform: rotate(0deg);}
+    100% {transform: rotate(0deg);}
+`
+
 const ProjectListItem = ({ href, children, emoji }: { href: string; children: ReactNode; emoji: ReactNode }) => {
 
     const listItemStyle = {
@@ -10,19 +18,13 @@ const ProjectListItem = ({ href, children, emoji }: { href: string; children: Re
         alignItems: 'center'
     }
 
-    const rotationKeyframe = keyframes`
-        0% {transform: rotate(0deg);}
-        15% {transform: rotate(-20deg);}
-        50% {transform: rotate(10deg);}
-        85% {transform: rotate(0deg);}
-        100% {transform: rotate(0deg);}
-    `
+    const emojiColor = useColorModeValue(theme.colors.steelBlue, theme.colors.yellowCrayola)
 
     const emojiStyle: SystemStyleObject = {
         display: 'none',
         margin: '0 3px',
         animation: `${rotationKeyframe} 1s`,
-        color: useColorModeValue(theme.colors.steelBlue, theme.colors.yellowCrayola)
+        color: emojiColor
     }
 
     const titleAfterStyle: SystemStyleObject = {
@@ -54,7 +56,7 @@ const ProjectListItem = ({ href, children, emoji }: { href: string; children: Re
                 <NextLink href={href} passHref>
                     <Box style={{ display: 'inline-flex', alignItems: 'center', fontSize: '15px', fontWeight: 'bold' }}>
                         <Text sx={titleAfterStyle} onTransitionEnd={showEmoji} onMouseLeave={showEmoji} className="projectLink">{children}</Text>
-                        <Box sx={emojiStyle} animation={rotationKeyframe}>{emoji}</Box>
+                        <Box sx={emojiStyle}>{emoji}</Box>
                     </Box>
                 </NextLink>
             </Box>
