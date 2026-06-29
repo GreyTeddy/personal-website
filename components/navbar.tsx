@@ -10,8 +10,9 @@ import {
 } from '@chakra-ui/react'
 
 const NavBar = () => {
+    const navbarBg = useColorModeValue('rgba(220,220,220,0.4)','rgba(50,50,50,0.4)')
     const navbarStyle: SystemStyleObject = {
-        backgroundColor: useColorModeValue('rgba(220,220,220,0.4)','rgba(50,50,50,0.4)'),
+        backgroundColor: navbarBg,
         borderBottomRadius: '15'
     }
 
