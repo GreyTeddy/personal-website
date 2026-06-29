@@ -12,9 +12,10 @@ import Socials from "../components/socials"
 import { Divider } from '@chakra-ui/react'
 
 const Page = () => {
+    const heartEmoji = useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)
     useEffect(() => {
         console.log('What are you looking for, here? Skidaddle!')
-    })
+    }, [])
     return (
         <Container maxWidth='container.lg'>
             <Background />
@@ -40,23 +41,23 @@ const Page = () => {
                 </Heading>
                 <Box>
                     <Paragraph>
-                        These are some projects I&apos;ve made during my free time {useColorModeValue(<span role="img" aria-label="black-heart">🖤</span>, <span role="img" aria-label="white-heart">🤍</span>)}.
+                        These are some projects I&apos;ve made during my free time {heartEmoji}.
                         I use searching_things and sticky_noter everyday at work! You can try it them as well!
                     </Paragraph>
                     <List fontWeight={40} >
-                        <ProjectListItem href="https://github.com/GreyTeddy/searching_things" emoji={<FaSearch />}>
+                        <ProjectListItem key="searching_things" href="https://github.com/GreyTeddy/searching_things" emoji={<FaSearch />}>
                             searching_things
                         </ProjectListItem>
-                        <ProjectListItem href="https://github.com/GreyTeddy/sticky_noter" emoji={<MdOutlineSpeakerNotes />}>
+                        <ProjectListItem key="sticky_noter" href="https://github.com/GreyTeddy/sticky_noter" emoji={<MdOutlineSpeakerNotes />}>
                             sticky_noter
                         </ProjectListItem>
-                        <ProjectListItem href="https://github.com/GreyTeddy/eater_dropper" emoji={<FaCircle />}>
+                        <ProjectListItem key="eater_dropper" href="https://github.com/GreyTeddy/eater_dropper" emoji={<FaCircle />}>
                             eater_dropper
                         </ProjectListItem>
-                        <ProjectListItem href="https://greyteddy.github.io/not_flappy_bird/" emoji={<FaKiwiBird />}>
+                        <ProjectListItem key="not_flappy_bird" href="https://greyteddy.github.io/not_flappy_bird/" emoji={<FaKiwiBird />}>
                             not_flappy_bird
                         </ProjectListItem>
-                        <ProjectListItem href="https://greyteddy.github.io/piano/" emoji={<CgPiano />}>
+                        <ProjectListItem key="piano" href="https://greyteddy.github.io/piano/" emoji={<CgPiano />}>
                             piano
                         </ProjectListItem>
                     </List>
@@ -71,10 +72,10 @@ const Page = () => {
                         I have been making music for a while but I&apos;ve been pressured by friends to release these ones.
                     </Paragraph>
                     <List fontWeight={40}>
-                        <ProjectListItem href='https://www.youtube.com/watch?v=tAmfmrORvHk' emoji={<BsSuitHeartFill />}>
+                        <ProjectListItem key="care" href='https://www.youtube.com/watch?v=tAmfmrORvHk' emoji={<BsSuitHeartFill />}>
                             Care
                         </ProjectListItem>
-                        <ProjectListItem href='https://www.youtube.com/watch?v=nagHuJAb2s0' emoji={<BsMusicNote />}>
+                        <ProjectListItem key="maybe" href='https://www.youtube.com/watch?v=nagHuJAb2s0' emoji={<BsMusicNote />}>
                             Maybe
                         </ProjectListItem>
                     </List>
