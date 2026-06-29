@@ -42,7 +42,7 @@ const Page = () => {
                 <Box>
                     <Paragraph>
                         These are some projects I&apos;ve made during my free time {heartEmoji}.
-                        I use searching_things and sticky_noter everyday at work! You can try it them as well!
+                        I use searching_things and sticky_noter everyday at work! You can try them as well!
                     </Paragraph>
                     <List fontWeight={40} >
                         <ProjectListItem key="searching_things" href="https://github.com/GreyTeddy/searching_things" emoji={<FaSearch />}>
