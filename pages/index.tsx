@@ -1,7 +1,9 @@
 import { Container, Box, Heading, List, useColorModeValue } from "@chakra-ui/react"
 import Paragraph from "../components/paragraph"
 import Section from '../components/section'
-import Background from '../components/background'
+import dynamic from 'next/dynamic'
+
+const Background = dynamic(() => import('../components/background'), { ssr: false })
 import { BsMusicNote, BsSuitHeartFill } from 'react-icons/bs'
 import { FaCircle, FaKiwiBird, FaSearch } from 'react-icons/fa'
 import { CgPiano } from 'react-icons/cg'

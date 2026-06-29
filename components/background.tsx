@@ -27,6 +27,7 @@ const Background = () => {
       width: "730px",
       background: image,
       filter: bgFilter,
+      willChange: 'transform',
       animation: `${rotationKeyframe} 10s ease-in-out infinite`
     }}></Box>
   )
