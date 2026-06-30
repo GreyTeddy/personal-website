@@ -1,5 +1,4 @@
-import { extendTheme, StyleFunctionProps } from '@chakra-ui/react'
-import { mode } from '@chakra-ui/theme-tools'
+import { extendTheme } from '@chakra-ui/react'
 
 const colors = {
     eerieBlack: '#141414',
@@ -12,40 +11,40 @@ const colors = {
 }
 
 const styles = {
-    global: (props: StyleFunctionProps) => ({
+    global: {
         body: {
-            bg: mode(colors.platinum, colors.eerieBlack)(props)
+            bg: 'var(--bg)'
         }
-    })
+    }
 }
 
 const components = {
     Heading: {
         variants: {
-            'section-title': (props: StyleFunctionProps) => ({
+            'section-title': {
                 textDecoration: 'underline',
                 textUnderlineOffset: 6,
                 textDecorationThickness: 4,
-                textDecorationColor: mode(colors.jet,colors.platinum)(props),
+                textDecorationColor: 'var(--section-title-color)',
                 fontSize: 25,
                 marginTop: 3,
                 marginBottom: 4
-            }),
+            },
             'page-title': {
-                margin:'7px 0',
+                margin: '7px 0',
                 left: '-1'
             }
         }
     },
     Link: {
-        baseStyle: (props: StyleFunctionProps) => ({
-            color: mode(colors.steelBlue, colors.yellowCrayola)(props),
-        })
+        baseStyle: {
+            color: 'var(--link-color)',
+        }
     },
     DrawerBody: {
-        baseStyle: (props: StyleFunctionProps) => ({
-            background: mode(colors.steelBlue, colors.yellowCrayola)(props),
-        })
+        baseStyle: {
+            background: 'var(--drawer-bg)',
+        }
     }
 }
 
