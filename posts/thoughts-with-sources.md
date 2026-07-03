@@ -4,8 +4,6 @@ date: '2026-07-03'
 excerpt: 'Thoughts might be better than nothing?'
 ---
 
-The spiders are coming!
-
 - _(need source)_ Internal or external tool means you should consider who supports it (and who owns it)… either way you end up paying for it somehow lool.
 - [They only had one postgres write instance on OpenAI not one postgres instance](https://openai.com/index/scaling-postgresql/)… I’m stupid
     - Had like 50 read replicas, which of course caused issues on WAL
