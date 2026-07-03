@@ -54,7 +54,7 @@ const ProjectListItem = ({ href, children, emoji }: { href: string; children: Re
     return (
         <ListItem sx={listItemStyle}>
             <Box style={{ display: 'inline-flex', alignItems: 'center' }}>
-                <NextLink href={href}>
+                <NextLink href={href} passHref>
                     <Box style={{ display: 'inline-flex', alignItems: 'center', fontSize: '15px', fontWeight: 'bold' }}>
                         <Text sx={titleAfterStyle} onTransitionEnd={showEmoji} onMouseLeave={showEmoji} className="projectLink">{children}</Text>
                         <Box sx={emojiStyle}>{emoji}</Box>
