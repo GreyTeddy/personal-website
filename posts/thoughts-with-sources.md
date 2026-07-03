@@ -15,6 +15,6 @@ The spiders are coming!
 - [A server should stop processing a request, if the user doesn’t want it anymore](https://sre.google/sre-book/addressing-cascading-failures/)…
     - with exceptions of course, can’t stop in a weird “in processing” state - we would need to handle that.
 
-> I should have my thoughts, but I should also remember why I had them, or more like… who/what inspired me to have the thought. for extra sources I guess an extra (yeap)/(yeah) hopefully will suffice
+> _I should have my thoughts, but I should also remember why I had them, or more like… who/what inspired me to have the thought. for extra sources I guess an extra (yeap)/(yeah) hopefully will suffice_
 
 ʕ •ᴥ•ʔ
