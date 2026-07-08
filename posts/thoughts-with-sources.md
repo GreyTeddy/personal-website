@@ -5,6 +5,8 @@ excerpt: 'Thoughts might be better than nothing?'
 ---
 
 - _(need source)_ Internal or external tool means you should consider who supports it (and who owns it)… either way you end up paying for it somehow lool.
+- Having [a bad coding standard is better than not having a coding standard at all](https://youtu.be/9yTjNGnw-4Q?t=91)...
+  - but I'm probably going to be lazy and not write it down on the repo
 - [They only had one postgres write instance on OpenAI not one postgres instance](https://openai.com/index/scaling-postgresql/)… I’m stupid
     - Had like 50 read replicas, which of course caused issues on WAL
     - … and the ended up with Azure CosmosDB, i.e. …sharding 🫠
