@@ -1,6 +1,6 @@
 ---
 title: 'Thoughts with Sources!'
-date: '2026-07-03'
+date: '2026-07-08'
 excerpt: 'Thoughts might be better than nothing?'
 ---
 
