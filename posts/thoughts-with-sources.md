@@ -14,6 +14,7 @@ excerpt: 'Thoughts might be better than nothing?'
     - then again of course… [simple better than complex, complex better than complicated](https://peps.python.org/pep-0020/#the-zen-of-python)
 - [A server should stop processing a request, if the user doesn’t want it anymore](https://sre.google/sre-book/addressing-cascading-failures/)…
     - with exceptions of course, can’t stop in a weird “in processing” state - we would need to handle that.
+    - ... who is putting the effort to doing that? I have definitely seen websites do that... but I don't think that many stop the request server side.
 
 _I should have my thoughts, but I should also remember why I had them, or more like… who/what inspired me to have the thought. for extra sources I guess an extra (yeap)/(yeah) hopefully will suffice._
 
