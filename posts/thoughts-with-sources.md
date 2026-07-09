@@ -6,7 +6,7 @@ excerpt: 'Thoughts might be better than nothing?'
 
 _2026-07-09_
 - The easier the onboarding, the easier to contribute to something.
-  - I personally can attest to the fact that it has been easy to start developing [locally on a Zig project](https://github.com/ghostty-org/ghostty), given that it did pass [the README check](https://youtu.be/iqddnwKF8HQ?t=2866)
+  - I personally can attest to the fact that it has been easy to start developing [locally on a Zig project on macos](https://github.com/ghostty-org/ghostty/blob/main/HACKING.md), given that it did pass [the README check](https://youtu.be/iqddnwKF8HQ?t=2866)
 ---
 _Before 2026-07-09_
 - Having [a bad coding standard is better than not having a coding standard at all](https://youtu.be/9yTjNGnw-4Q?t=91)...
