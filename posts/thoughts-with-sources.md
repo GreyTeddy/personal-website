@@ -30,6 +30,6 @@ _Before 2026-07-08_
 - _(need source)_ Internal or external tool means you should consider who supports it (and who owns it)… either way you end up paying for it somehow lool. [
 
 
-_I should have my thoughts, but I should also remember why I had them, or more like… who/what inspired me to have the thought. for extra sources I guess an extra (yeap)/(yeah) hopefully will suffice._
+_I should have my thoughts, but I should also remember why I had them, or more like… who/what inspired me to have the thought. for extra sources I guess an extra (yeap)/(yeah) hopefully will suffice. Feel free to msg me for any comments_
 
 ʕ •ᴥ•ʔ
